@@ -56,19 +56,62 @@ function exercice4()
     ];
     
     let btn = document.getElementById("btn-add-hero");
-    let table = document.querySelector("#ex4 table tbody");
+    let tbody = document.querySelector("#ex4 table tbody");
+    let count = 0;
     
-    
+    btn.addEventListener("click", function(){
+       
+       let tr = document.createElement("tr");
+       let tdName = document.createElement("td");
+       let tdSecret = document.createElement("td");
+       
+       let heroName = document.createTextNode(heroes[count].name);
+       let heroSecret = document.createTextNode(heroes[count].secret);
+       
+       tdName.appendChild(heroName);
+       tdSecret.appendChild(heroSecret);
+       
+       tr.appendChild(tdName);
+       tr.appendChild(tdSecret);
+       
+       tbody.appendChild(tr);
+       
+       if(count < heroes.length){
+           
+            count++;
+       }
+    });
 }
 
 function exercice5()
 {
-
+    
+    let blueBox = document.getElementById("blue");
+    let redBox = document.getElementById("red");
+    let greenBox = document.getElementById("green");
+    
+    let btn = document.getElementById("btn-turn");
+    
+    btn.addEventListener("click", function(){
+        
+        blueBox.id  = "red";
+        redBox.id  = "green";
+        greenBox.id  = "blue";
+        
+    });
 }
 
 function exercice6()
 {
-
+    
+    let ball = document.getElementById("ball");
+    let btn = document.getElementById("btn-roll");
+    
+    btn.addEventListener("click", function(){
+        
+        ball.classList.toggle("rolling-ball");
+        
+    });
 }
 
 window.addEventListener("DOMContentLoaded", function(){
@@ -87,8 +130,14 @@ exercice3();
 
 /***** Exercice 4 *****/
 
+exercice4();
+
 /***** Exercice 5 *****/
 
+exercice5();
+
 /***** Exercice 6 *****/
+
+exercice6();
     
 });

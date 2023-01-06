@@ -67,3 +67,27 @@ body h1 {
 #green {
     background-color: green;
 }
+
+#ball {
+    width:8vh;
+    height:8vh;
+    border-radius: 50%;
+    background: linear-gradient(red, purple, blue);
+    margin-bottom: 1rem;
+}
+
+.rolling-ball {
+    animation-name : roll;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes roll {
+    from {
+        transform: translateX(0) rotate(0);
+    }
+    to {
+        transform: translateX(25vw) rotate(720deg);
+    }
+}
