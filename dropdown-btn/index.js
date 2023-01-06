@@ -1,19 +1,24 @@
-let menu = ["home", "blog", "contact"]
-
 function dropMenu(){
     
     let btn = document.getElementById("d-down");
-    let count = 0
+    let hiddenList = document.getElementById("hidden-list");
     
     btn.addEventListener("click", function(){
        
-       for(item of menu){
+       hiddenList.classList.toggle("d-on");
+       
+       window.addEventListener("click", function(e){
            
-           let hiddenList = document.getElementById("hidden-list")
-           let li = document.createElement("li");
+           if(e.target !== btn){
+               
+               hiddenList.classList.remove("d-on")
+           }
            
-           
-       } 
-        
+       });
     });
 }
+
+window.addEventListener("DOMContentLoaded", function(){
+    
+    dropMenu();
+})

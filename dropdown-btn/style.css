@@ -70,7 +70,7 @@ body > header{
     background-color: grey;
 }
 
-body > header > nav > ul > li > button{
+body > header > nav > button{
     
     background-color: red;
     color: white;
@@ -80,9 +80,10 @@ body > header > nav > ul > li > button{
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
+    margin-bottom: .5vh;
 }
 
-body > header > nav > ul > li > ul{
+body > header > nav > ul{
     
     background-color: red;
     color: white;
@@ -91,9 +92,11 @@ body > header > nav > ul > li > ul{
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
+    display: none;
+    position: absolute;
 }
 
-body > header > nav > ul > li > ul > li{
+body > header > nav > ul > li{
     
     color: white;
     padding: 1vh 1vw;
@@ -102,3 +105,12 @@ body > header > nav > ul > li > ul > li{
     text-transform: uppercase;
 }
 
+.d-on{
+    
+    display: block;
+}
+
+.d-off{
+    
+    display: none;
+}
